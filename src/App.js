@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Menu from './components/menucomponent'
 import {Navbar,NavbarBrand} from 'reactstrap'
@@ -8,10 +9,11 @@ class App extends Component {
   {
   return (
     <div className="App">
-      <Navbar dark color="primary"></Navbar>
+      <Navbar dark color="primary">
       <div className="container">
         <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
       </div>
+      </Navbar>
       <Menu/>
     </div>
      
