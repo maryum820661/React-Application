@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Menu from './components/menucomponent'
 import {Navbar,NavbarBrand} from 'reactstrap'
-import {Card,CardImg,CardImgOverlay,CardText,CardBody,CardTitle} from 'reactstrap'
 import { DISHES } from './shared/dishes'
 
 class App extends Component {
