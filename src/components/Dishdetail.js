@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 //import {Media} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card,CardImg,CardImgOverlay,CardText,CardBody,CardTitle} from 'reactstrap';
@@ -62,30 +62,34 @@ return (
     
 );
 }
-class DishDetail extends Component{ //Dish detail component initialized
-    constructor(props)// constructor for props
-    {
-        super(props);
-    }
 
-    render()
-    {  
-        if (this.props.dish != null) {
-            return (
-                <div className="container">
-                    <div className="row">
-                        <RenderDish dish={this.props.dish} />
-                        <RenderComments Comments={this.props.dish.comments} />
-                    </div>
+
+
+
+
+const DishDetail=props=>{
+    
+    if (props.dish != null) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <RenderDish dish={props.dish} />
+                    <RenderComments Comments={props.dish.comments} />
                 </div>
-                
-            );
-        } else {
-            return (
-                <div></div>
-            );
-        }
-
+            </div>
+            
+        );
+    } else {
+        return (
+            <div></div>
+        );
     }
+
 }
+
+
+
+
+ 
+
 export default DishDetail;
